@@ -1,4 +1,5 @@
 import React from "react";
+import './categories.styles.scss'
 
 const App = () => {
 
@@ -23,11 +24,12 @@ const App = () => {
             id: 5,
             title: 'Mens'
         },
-    ]
+    ];
+
     return (
         <div className="categories-container">
-            {categories.map(({title}) => (
-                <div className="category-container">
+            {categories.map(({title, id}) => (
+                <div key={id} className="category-container">
                     {/* <img/> */}
                     <div className="background-image"/>
                     <div className="category-body-container">
